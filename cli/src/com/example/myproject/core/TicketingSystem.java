@@ -132,7 +132,7 @@ public class TicketingSystem {
                 @Override
                 public String format(LogRecord record) {
                     if (record.getLevel().intValue() >= Level.WARNING.intValue()) {
-                        return STR."\{record.getMessage()}\n";
+                        return record.getMessage() + "\n";
                     }
                     return "";
                 }
@@ -141,7 +141,7 @@ public class TicketingSystem {
             rootLogger.addHandler(consoleHandler);
 
             // Log the start of a new logging session
-            LOGGER.info(STR."Logging initiated for event: \{eventName}");
+            LOGGER.info("Logging initiated for event: " + eventName);
 
         } catch (Exception e) {
             System.err.println("Failed to setup logger: " + e.getMessage());

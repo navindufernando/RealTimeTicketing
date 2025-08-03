@@ -30,10 +30,10 @@ public class TicketProducer implements Runnable {
                 try {
                     if (ticketPool.produceTicket(this)) {
                         ticketsProduced++;
-                        LOGGER.info(STR."\{producerId} produced a ticket. Total produced: \{ticketsProduced}");
+                        LOGGER.info(producerId + " produced a ticket. Total produced: " + ticketsProduced);
                     }
                 } catch (TicketPool.TicketException e) {
-                    LOGGER.warning(STR."\{producerId} encountered an error: \{e.getMessage()}");
+                    LOGGER.warning(producerId + " encountered an error: " + e.getMessage());
                 } finally {
                     producerLock.unlock();
                 }
@@ -44,7 +44,7 @@ public class TicketProducer implements Runnable {
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            LOGGER.warning(STR."\{producerId} interrupted: \{e.getMessage()}");
+            LOGGER.warning(producerId + " interrupted: " + e.getMessage());
         }
     }
     public String getProducerId() {

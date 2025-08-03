@@ -49,12 +49,12 @@ public class Configuration implements Serializable {
 
     // Get file paths based on event name
     private String getJsonFilePath() {
-        return STR."\{eventName}.json";
+        return eventName + ".json";
     }
 
     // Static method to get file paths for a given event name
     public static String getConfigFilePath(String eventName) {
-        return STR."\{eventName}.json";
+        return eventName + ".json";
     }
 
     // JSON Serialization Methods

@@ -38,7 +38,7 @@ public class TicketConsumer implements Runnable {
                         LOGGER.info(String.format("%s bought Ticket ID: %d", consumerId, ticketsConsumed));
                     }
                 } catch (TicketPool.TicketException e) {
-                    LOGGER.warning(STR."\{consumerId} encountered an error: \{e.getMessage()}");
+                    LOGGER.warning(consumerId + " encountered an error: " + e.getMessage());
                 } finally {
                     consumerLock.unlock();
                 }
@@ -49,7 +49,7 @@ public class TicketConsumer implements Runnable {
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            LOGGER.warning(STR."\{consumerId} interrupted: \{e.getMessage()}");
+            LOGGER.warning(consumerId + " interrupted: " + e.getMessage());
         }
     }
 
@@ -90,7 +90,7 @@ public class TicketConsumer implements Runnable {
                             LOGGER.info(String.format("Priority %s bought Ticket ID: %d, Remaining VIP tickets: %d", consumerId, ticketsConsumed, (maxTickets - ticketsConsumed)));
                         }
                     } catch (TicketPool.TicketException e) {
-                        LOGGER.warning(STR."VIP \{consumerId} encountered an error: \{e.getMessage()}");
+                        LOGGER.warning("VIP " + consumerId + " encountered an error: " + e.getMessage());
                     } finally {
                         consumerLock.unlock();
                     }
@@ -101,7 +101,7 @@ public class TicketConsumer implements Runnable {
                 }
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
-                LOGGER.warning(STR."VIP \{consumerId} interrupted: \{e.getMessage()}");
+                LOGGER.warning("VIP " + consumerId + " interrupted: " + e.getMessage());
             }
         }
 
