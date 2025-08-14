@@ -1,7 +1,6 @@
 # 🎟 Real-Time Event Ticketing System
 
-A robust, multi-threaded **Java** application simulating a **real-time event ticketing system** using the **producer-consumer pattern**. This project showcases advanced **concurrent programming**, **thread safety**, **configuration persistence**, and **database-backed ticket management**. It includes **VIP prioritization**, detailed logging, and runtime statistics—all backed by persistent storage using **Root Firebase** (no local-only data).
-
+A robust, multi-threaded **Java** application simulating a **real-time event ticketing system** using the **producer-consumer pattern**. This project showcases advanced **concurrent programming**, **thread safety**, **configuration persistence**. It includes **VIP prioritization**, detailed logging, and runtime statistics.
 ---
 
 ## 🚀 Features
