@@ -26,7 +26,6 @@ A robust, multi-threaded **Java** application simulating a **real-time event tic
   - `ReentrantLock`, `Condition`, `BlockingQueue`, `PriorityBlockingQueue`, `ExecutorService`, `ScheduledExecutorService`.
 - **GSON**: Handles JSON serialization/deserialization for configuration persistence.
 - **Java Logging API**: Custom logging to both console and file with formatters.
-- **Root Firebase**: Handles backend services and persistent **cloud-based storage** of logs/configurations (no local-only storage).
 
 ---
 
