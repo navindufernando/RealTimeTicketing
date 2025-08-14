@@ -68,7 +68,6 @@ Run the application to access the CLI menu.
 - **VIP Priority**: `PriorityBlockingQueue` ensures VIPs get first access.
 - **Randomized Timing**: 50%–150% jitter simulates real-world delays.
 - **Custom Logging**: Info-level logs in file, warnings in console.
-- **Persistent Data**: Config and logs are stored remotely using **Firebase**.
 
 ---
 
